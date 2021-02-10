@@ -1,0 +1,22 @@
+
+@import "bootstrap-grid.css";
+@import "bootstrap-reboot.css";
+@import "bootstrap.css";
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+p {
+  color: #117a8b;
+
+}
+
+.table{
+  text-align: center;
+}

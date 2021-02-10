@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap-grid.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap-reboot.css">
+    <link rel='stylesheet' href="stylesheets/style.css"/>
+    <title><%=title%></title>
+</head>
+<body>
+<h1><%=title%></h1>
+<p>by Ксенофонтова Софія «<%=title%>»</p>
+
+
+<!--    <div class="container">-->
+<table class="table table-responsive table-hover table-bordered" style="border-color:white;">
+    <thead class="thead-light">
+    <tr>
+
+        <% for (let i = 0; i < grades[0].data.length; i++){ %>
+            <th>Предмет <%= i + 1 %></th>
+        <% } %>
+
+        <th>Середнє значення</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <% for (let i = 0; i < grades.length; i++){ %>
+        <tr>
+            <% for (let j = 0; j < grades[0].data.length; j++){ %>
+                <td><%= grades[i].data[j] %></td>
+            <% } %>
+            <td><%= grades[i].mean %></td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+<!--    </div>-->
+
+<div class="container">
+    <a href="/a" class="btn btn-outline-primary">Сортувати за зростанням</a>
+    <a href="/b" class="btn btn-outline-success">Сортувати за спаданням</a>
+</div>
+
+</body>
+</html>
